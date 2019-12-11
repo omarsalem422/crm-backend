@@ -1,17 +1,24 @@
-// start working on endpoints
+import { addnewContact } from '../controllers/crmController';
+
 const routes = (app) => {
     app.route('/contact')
-        .get((req, res) => 
-        res.send('GET request successful!'))
+        .get((req,res, next) => {
+            // middleware
+            console.log(`Request from: ${req.originalUrl}`)
+            console.log(`Request type: ${req.method}`)
+            next();
+        }, (req,res, next) => {
+            res.send('GET request successful!');
+        })
+        
 
-        .post((req, res) => 
-        res.send('POST request successful!'));
-    
-        app.route('/contact/:id')
-        .put((req, res) => 
+        .post(addnewContact);
+
+    app.route('/contact/:contactID')
+        .put((req,res) =>
         res.send('PUT request successful!'))
 
-        .delete((req, res) => 
+        .delete((req,res) =>
         res.send('DELETE request successful!'));
 }
 

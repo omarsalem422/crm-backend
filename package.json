@@ -1,28 +1,19 @@
 {
-  "name": "cmr-backend",
+  "name": "crm",
   "version": "1.0.0",
-  "description": "",
+  "description": "crm backend",
   "main": "index.js",
   "scripts": {
     "start": "nodemon ./index.js --exec babel-node -e js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/omarsalem422/crm-backend.git"
-  },
-  "keywords": [],
-  "author": "Omar Salem",
+  "author": "Emmanuel Henri",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/omarsalem422/crm-backend/issues"
-  },
-  "homepage": "https://github.com/omarsalem422/crm-backend#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
-    "mongodb": "^3.4.0",
-    "mongoose": "^5.8.0",
-    "nodemon": "^2.0.2"
+    "mongodb": "^3.3.2",
+    "mongoose": "^5.7.1",
+    "nodemon": "^1.19.2"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
